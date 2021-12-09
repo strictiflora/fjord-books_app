@@ -30,4 +30,20 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    title: 'Title'
+    memo: 'Memo'
+    author: 'Author'
+    picture: 'Picture'
+    editing_book: 'Editing Book'
+    new_book: 'New Book'
+    show: 'Show'
+    edit: 'Edit'
+    back: 'Back'
+    destroy: 'Destroy'
+    destruction_alert: 'Are you sure?'
+    prohibion_to_be_saved: 'prohibited this book from being saved'
+  controller:
+    creation_success: 'Book was successfully created.'
+    update_success: 'Book was successfully updated.'
+    destruction_success: 'Book was successfully destroyed.'
