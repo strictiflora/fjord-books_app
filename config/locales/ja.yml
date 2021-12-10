@@ -145,6 +145,14 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "%{entry_name}が見つかりません"
+          one: "<b>1つの</b> %{entry_name}を表示"
+          other: "<b>全ての %{count}</b> %{entry_name}を表示"
+      more_pages:
+        display_entries: "%{entry_name} <b>%{total}</b> 件中 <b>%{first}&nbsp;-&nbsp;%{last}</b> の表示"
   number:
     currency:
       format:
@@ -215,6 +223,12 @@ ja:
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "&hellip;"
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
