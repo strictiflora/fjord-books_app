@@ -10,9 +10,9 @@ ja:
     destruction_alert: '本当に削除しますか？'
     prohibion_to_be_saved: 'この本は保存できません'
   controller:
-    creation_success: '本の作成に成功しました'
-    update_success: '本の更新に成功しました'
-    destruction_success: '本の削除に成功しました'
+    creation_success: '%{book}の作成に成功しました'
+    update_success: '%{book}の更新に成功しました'
+    destruction_success: '%{book}の削除に成功しました'
   activerecord:
     models:
       book: 本
