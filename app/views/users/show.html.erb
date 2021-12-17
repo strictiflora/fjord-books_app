@@ -5,6 +5,10 @@
 </section>
 
 <p>
+  <%= render 'follow_form', user: @user %>
+</p>
+
+<p>
   <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
 </p>
