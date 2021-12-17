@@ -38,6 +38,8 @@ end
 group :development do
   gem 'faker'
   gem 'i18n_generators'
+  # rails consoleの文字化けを解消する
+  gem 'irb', '>= 1.3.6'
   gem 'letter_opener_web'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'

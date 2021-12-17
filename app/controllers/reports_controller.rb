@@ -8,6 +8,7 @@ class ReportsController < ApplicationController
 
   # GET /reports/1 or /reports/1.json
   def show
+    @sentences = @report.body.split(/\s/).delete_if{ |words| words == "" }
   end
 
   # GET /reports/new
