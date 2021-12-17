@@ -1,4 +1,4 @@
-<h1><%= @user.name %>のフォロワー一覧</h1>
+<h1><%= t('views.follow.followers_index', name: @user.name) %></h1>
 
 <% if @users.any? %>
   <table>
@@ -28,6 +28,6 @@
   </table>
   <%= paginate @users %>
 <% else %>
-  <p>フォロワーはいません</p>
+  <p><%= t('views.follow.no_followers') %></p>
 <% end %>
 <%= link_to t('views.common.back'), user_path %>

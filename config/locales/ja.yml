@@ -224,6 +224,15 @@ ja:
       previous: '前'
       next: '次'
       truncate: '...'
+    follow:
+      follow: フォロー
+      unfollow: フォロー解除
+      followings: フォロー
+      followers: フォロワー
+      followings_index: "%{name}のフォロー一覧"
+      followers_index: "%{name}のフォロワー一覧"
+      no_followings: フォローしているユーザはいません
+      no_followers: フォロワーはいません
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
