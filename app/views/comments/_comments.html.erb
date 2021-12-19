@@ -1,0 +1,18 @@
+<% if commentable.comments.any? %>
+  <% commentable.comments.each do |comment| %>
+    <p><%= name_or_email(comment) %></p>
+    <p><%= l comment.created_at %></p>
+    <p><%= simple_format(h(comment.body)) %></p>
+    <% if current_user == comment.user %>
+      <td><%= link_to t('views.common.edit'), edit_polymorphic_path([commentable, comment]) %>|</td>
+      <td><%= link_to t('views.common.destroy'), [commentable, comment], method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>
+    <% end %><hr>
+  <% end %>
+<% else %>
+  <p><%= t('comments.no_comments') %></p>
+<% end %>
+
+<%= form_with model: [commentable, Comment.new] do |form| %>
+  <%= form.text_area :body, required: true %><br>
+  <%= form.submit t('comments.submit') %>
+<% end %>
