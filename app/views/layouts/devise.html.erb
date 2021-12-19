@@ -16,16 +16,6 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <p>
-      <% if user_signed_in? %>
-        <strong><%= current_user.email %></strong><%= t('views.common.logged_in_as') %>
-        <%= link_to t('views.common.edit_profile'), edit_user_registration_path %> |
-        <%= link_to t('views.common.logout'), destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to t('views.common.signup'), new_user_registration_path %> |
-        <%= link_to t('views.common.login'), new_user_session_path %>
-      <% end %>
-    </p>
     <%= yield %>
   </body>
 </html>
