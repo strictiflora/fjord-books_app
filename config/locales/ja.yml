@@ -250,8 +250,15 @@ ja:
       notice: "フォローしました。"
     destroy:
       notice: "フォロー解除しました。"
+  comments:
+    submit: コメントする
+    update: 更新する
+    no_comments: コメントはありません
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:
       edit:
         title: "アカウント編集"
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
