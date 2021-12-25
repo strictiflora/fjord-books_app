@@ -11,8 +11,12 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params.merge(user: current_user))
     if @comment.save
       redirect_to url_for(@commentable), notice: t('controllers.common.notice_create', name: Comment.model_name.human)
+    elsif @comment.commentable_type == 'Book'
+      @book = @commentable
+      render 'books/show'
     else
-      redirect_to url_for(@commentable)
+      @report = @commentable
+      render 'reports/show'
     end
   end
 
@@ -23,7 +27,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to url_for(@commentable), notice: t('controllers.common.notice_update', name: Comment.model_name.human)
     else
-      redirect_to url_for(@commentable)
+      render :edit
     end
   end
 
@@ -49,7 +53,6 @@ class CommentsController < ApplicationController
   end
 
   def ensure_user
-    set_commentable
     comments = current_user.comments
     comment = comments.find_by(id: params[:id])
     redirect_to polymorphic_path(@commentable) unless comment
