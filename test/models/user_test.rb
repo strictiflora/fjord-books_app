@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-
   setup do
     @alice = users(:alice)
     @bob = users(:bob)
